@@ -2,6 +2,8 @@
   position: relative;
   cursor: pointer;
   height: 100%;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .socialButton:hover {
@@ -146,6 +148,11 @@
   animation: slideIn 0.2s ease forwards;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  min-width: 32px;
+  text-align: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @keyframes slideIn {
@@ -166,8 +173,9 @@
 
 @media (max-width: 768px) {
   .buttonContent {
-    padding: 12px;
+    padding: 14px 12px;
     gap: 6px;
+    min-height: 100px;
   }
 
   .icon {
@@ -181,12 +189,32 @@
   .handle {
     font-size: 11px;
   }
+
+  .copyBtn {
+    opacity: 0.9;
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+    animation: none;
+  }
+
+  /* Disable hover transforms on mobile for better touch experience */
+  .socialButton {
+    transform: none !important;
+  }
+
+  .buttonContent:hover {
+    transform: none;
+  }
 }
 
 @media (max-width: 480px) {
   .buttonContent {
-    padding: 10px;
+    padding: 12px 10px;
     gap: 4px;
+    min-height: 90px;
   }
 
   .icon {
@@ -199,5 +227,13 @@
 
   .handle {
     font-size: 10px;
+    max-width: calc(100% - 40px);
+  }
+
+  .copyBtn {
+    padding: 4px 8px;
+    font-size: 11px;
+    bottom: 4px;
+    right: 4px;
   }
 }

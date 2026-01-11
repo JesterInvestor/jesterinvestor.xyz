@@ -8,8 +8,23 @@ const SocialButton = ({ name, handle, url, icon, color, backgroundColor }) => {
   const [isCopied, setIsCopied] = useState(false)
   const [rotation, setRotation] = useState(0)
   const [scale, setScale] = useState(1)
+  const [isMobile, setIsMobile] = useState(false)
 
-  const handleClick = () => {
+  React.useEffect(() => {
+    // Detect mobile device
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768 || 'ontouchstart' in window)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  const handleClick = (e) => {
+    // On mobile, prevent immediate navigation if clicking copy area
+    if (isMobile && e.target.closest('[data-copy-btn]')) {
+      return
+    }
     if (url.startsWith('mailto:')) {
       window.location.href = url
     } else {
@@ -25,6 +40,7 @@ const SocialButton = ({ name, handle, url, icon, color, backgroundColor }) => {
   }
 
   const handleMouseMove = (e) => {
+    if (isMobile) return // Disable fancy effects on mobile for performance
     const rect = e.currentTarget.getBoundingClientRect()
     const centerX = rect.width / 2
     const centerY = rect.height / 2
@@ -92,9 +108,14 @@ const SocialButton = ({ name, handle, url, icon, color, backgroundColor }) => {
         </div>
       </div>
 
-      {isHovered && (
-        <div className={styles.copyBtn} onClick={handleCopy}>
-          {isCopied ? '✓ Copied' : 'Copy'}
+      {(isHovered || isMobile) && (
+        <div 
+          className={styles.copyBtn} 
+          onClick={handleCopy}
+          data-copy-btn="true"
+          style={{ opacity: isMobile ? 0.9 : undefined }}
+        >
+          {isCopied ? '✓ Copied' : '📋'}
         </div>
       )}
     </div>
