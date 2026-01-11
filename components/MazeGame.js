@@ -18,8 +18,9 @@ export default function MazeGame() {
   const [attempts, setAttempts] = useState(0)
   const [bestTime, setBestTime] = useState(null)
 
-  const [difficulty, setDifficulty] = useState('medium')
-  const [algorithm, setAlgorithm] = useState('kruskal')
+  // Fixed settings: Expert (25x25) and Kruskal's algorithm
+  const difficulty = 'expert'
+  const algorithm = 'kruskal'
 
   const svgRef = useRef(null)
 
@@ -214,17 +215,7 @@ export default function MazeGame() {
       <div className={styles.header}>SVG Maze Game</div>
 
       <div className={styles.controls}>
-        <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)} className={styles.button}>
-          <option value="easy">Easy (10×10)</option>
-          <option value="medium">Medium (15×15)</option>
-          <option value="hard">Hard (20×20)</option>
-          <option value="expert">Expert (25×25)</option>
-        </select>
-        <select value={algorithm} onChange={(e) => setAlgorithm(e.target.value)} className={styles.button}>
-          <option value="kruskal">Kruskal’s</option>
-          <option value="recursive-backtracking">Recursive Backtracking</option>
-          <option value="prim">Prim’s</option>
-        </select>
+
         <button onClick={clearPath} disabled={!gameStarted} className={styles.button}>Clear Path</button>
         <button onClick={createNewMaze} className={styles.button}>New Maze</button>
       </div>

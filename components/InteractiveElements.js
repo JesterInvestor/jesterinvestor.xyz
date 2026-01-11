@@ -39,12 +39,15 @@ const WackyButton = ({ children, onClick, className = '' }) => {
   )
 }
 
-const MouseTracker = () => {
+const MouseTracer = () => {
+  const [trail, setTrail] = useState([])
   const [position, setPosition] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY })
+      const newPos = { x: e.clientX, y: e.clientY, id: Date.now() + Math.random() }
+      setPosition(newPos)
+      setTrail((prev) => [...prev, newPos].slice(-12)) // Keep last 12 points
     }
 
     window.addEventListener('mousemove', handleMouseMove)
@@ -52,14 +55,31 @@ const MouseTracker = () => {
   }, [])
 
   return (
-    <div
-      className={styles.mouseTracker}
-      style={{
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-      }}
-    />
+    <>
+      {/* Trail dots */}
+      {trail.map((point, idx) => (
+        <div
+          key={point.id}
+          className={styles.trailDot}
+          style={{
+            left: `${point.x}px`,
+            top: `${point.y}px`,
+            opacity: idx / trail.length * 0.8,
+          }}
+        />
+      ))}
+      {/* Main cursor */}
+      <div
+        className={styles.mouseTracker}
+        style={{
+          left: `${position.x}px`,
+          top: `${position.y}px`,
+        }}
+      />
+    </>
   )
 }
+
+const MouseTracker = MouseTracer // Alias for backwards compatibility
 
 export { FloatingEmoji, WackyButton, MouseTracker }
