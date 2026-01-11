@@ -36,8 +36,8 @@ const CreatorPage = () => {
     {
       id: 4,
       name: 'YouTube',
-      handle: '@jesterinvestor',
-      url: 'https://youtube.com/@jesterinvestor',
+      handle: '@Jester_Investor',
+      url: 'https://www.youtube.com/@Jester_Investor',
       icon: '▶️',
       color: '#FF0000',
       backgroundColor: '#ffffff'
