@@ -1,4 +1,4 @@
-# Jestrinvestor Creator Page
+# Jesterinvestor Creator Page
 
 A beautiful, interactive Linktree-style creator page built with React.
 

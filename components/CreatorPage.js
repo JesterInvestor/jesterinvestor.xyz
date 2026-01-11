@@ -3,8 +3,6 @@
 import React from 'react'
 import SocialButton from './SocialButton'
 import styles from './CreatorPage.module.css'
-
-const CreatorPage = () => {
 import { MouseTracker, FloatingEmoji } from './InteractiveElements'
 
 const CreatorPage = () => {
@@ -130,7 +128,7 @@ const CreatorPage = () => {
           <div className={styles.avatar}>
             <img src="/Video scooby gif.png" alt="Jesterinvestor Logo" className={styles.avatarImage} />
           </div>
-          <h1>Jestrinvestor</h1>
+          <h1>Jesterinvestor</h1>
           <p className={styles.bio}>Creator | Investor | Web3 Enthusiast</p>
           <p className={styles.subtitle}>Find me everywhere on the web</p>
         </div>
@@ -150,7 +148,7 @@ const CreatorPage = () => {
         </div>
 
         <footer className={styles.footer}>
-          <p>© 2026 Jestrinvestor. All links available 24/7</p>
+          <p>© 2026 Jesterinvestor. All links available 24/7</p>
         </footer>
       </div>
     </div>

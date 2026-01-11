@@ -94,7 +94,7 @@ const CreatorPage = () => {
           <div className="avatar">
             <span className="avatar-text">J</span>
           </div>
-          <h1>Jestrinvestor</h1>
+          <h1>Jesterinvestor</h1>
           <p className="bio">Creator | Investor | Web3 Enthusiast</p>
           <p className="subtitle">Find me everywhere on the web</p>
         </div>
@@ -114,7 +114,7 @@ const CreatorPage = () => {
         </div>
 
         <footer className="footer">
-          <p>© 2026 Jestrinvestor. All links available 24/7</p>
+          <p>© 2026 Jesterinvestor. All links available 24/7</p>
         </footer>
       </div>
     </div>

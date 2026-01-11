@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Jestrinvestor - Creator Links',
-  description: 'All social links and contact information for Jestrinvestor',
+  title: 'Jesterinvestor - Creator Links',
+  description: 'All social links and contact information for Jesterinvestor',
   viewport: 'width=device-width, initial-scale=1',
 }
 
