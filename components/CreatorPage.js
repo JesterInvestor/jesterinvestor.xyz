@@ -127,6 +127,7 @@ const CreatorPage = () => {
       <FloatingEmoji emoji="💚" duration={4} delay={1} />
       <FloatingEmoji emoji="✨" duration={3.5} delay={2} />
       <div className={styles.container}>
+        {/* HEADER WITH PNG AND TITLE AT TOP */}
         <div className={styles.header}>
           <div className={styles.avatar}>
             <img src="/Video scooby gif.png" alt="Jesterinvestor Logo" className={styles.avatarImage} />
@@ -136,7 +137,22 @@ const CreatorPage = () => {
           <p className={styles.subtitle}>Find me everywhere on the web</p>
         </div>
 
-        {/* Inspiration Showcase (inspired by modern React sites) */}
+        {/* SOCIAL BUTTONS - BELOW HEADER */}
+        <div className={styles.socialsGrid}>
+          {socials.map((social) => (
+            <SocialButton
+              key={social.id}
+              name={social.name}
+              handle={social.handle}
+              url={social.url}
+              icon={social.icon}
+              color={social.color}
+              backgroundColor={social.backgroundColor}
+            />
+          ))}
+        </div>
+
+        {/* Gallery Showcase */}
         <div style={{ marginBottom: 24 }}>
           <AnimatedHeadline text="Vibrant, Minimal, and Futuristic" />
           <div style={{ marginTop: 12 }}>
@@ -155,20 +171,6 @@ const CreatorPage = () => {
         <div style={{ marginBottom: 24 }}>
           <AnimatedHeadline text="Trippy SVG Maze" />
           <MazeGame />
-        </div>
-
-        <div className={styles.socialsGrid}>
-          {socials.map((social) => (
-            <SocialButton
-              key={social.id}
-              name={social.name}
-              handle={social.handle}
-              url={social.url}
-              icon={social.icon}
-              color={social.color}
-              backgroundColor={social.backgroundColor}
-            />
-          ))}
         </div>
 
         <footer className={styles.footer}>
