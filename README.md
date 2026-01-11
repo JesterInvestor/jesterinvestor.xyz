@@ -1,26 +1,14 @@
 # Jesterinvestor Creator Page
 
-A beautiful, interactive Linktree-style creator page built with React.
+Interactive, neon-themed creator page built with Next.js 14.
 
 ## Features
 
-✨ **Interactive Social Buttons** - Hover effects with smooth animations
-📱 **Fully Responsive** - Works perfectly on mobile, tablet, and desktop
-🎨 **Modern Design** - Beautiful gradient background and custom styling
-📋 **Copy Handles** - Click to open links, hover to copy handles
-🔗 **All Social Links** - Connect to Twitter, Instagram, TikTok, YouTube, Discord, Twitch, LinkedIn, GitHub, and Email
-
-## Social Links
-
-- **Twitter**: @jesterinvestor2
-- **Instagram**: @jesterinvestor
-- **TikTok**: @jesterinvestor
-- **YouTube**: @jesterinvestor
-- **Discord**: @jesterinvestor
-- **Twitch**: @jesterinvestor
-- **LinkedIn**: @jesterinvestor
-- **GitHub**: @jesterinvestor
-- **Email**: altcoinabsurdity+jesterinvestor@gmail.com
+✨ **Animated Social Buttons** – Hover glow, bounce, and drip overlay
+🎯 **Interactive Effects** – Mouse tracker and floating emojis
+📱 **Responsive Layout** – Optimized for mobile and desktop
+🔗 **Social Links** – Farcaster, Base, YouTube, Twitter, Discord, and more
+📋 **Copy Handles** – Quick copy on hover
 
 ## Installation
 
@@ -28,30 +16,32 @@ A beautiful, interactive Linktree-style creator page built with React.
 npm install
 ```
 
-## Running the App
+## Run Locally
 
 ```bash
-npm start
+npm run dev
 ```
 
-Opens [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Opens http://localhost:3000 in your browser.
 
-## Building for Production
+## Build and Start
 
 ```bash
-npm build
+npm run build
+npm run start
 ```
 
-## Customization
+## Customize
 
-Edit `src/components/CreatorPage.js` to:
-- Change profile name and bio
-- Add or remove social links
-- Update colors and styling
-- Modify the avatar
+Edit components/CreatorPage.js to:
+- Update profile name and avatar
+- Add or modify social links
+- Tweak colors and effects
 
-## Technologies Used
+Styles live in components/CreatorPage.module.css and components/SocialButton.module.css.
 
+## Tech Stack
+
+- Next.js 14
 - React 18
-- CSS3 with Flexbox and Grid
-- Modern JavaScript (ES6+)
+- CSS Modules

@@ -1,11 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// Deprecated: legacy React bootstrap not used by Next.js app.
+// Intentionally left inert to avoid confusion.
+export {}; 

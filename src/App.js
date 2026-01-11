@@ -1,13 +1,4 @@
-import React from 'react';
-import './App.css';
-import CreatorPage from './components/CreatorPage';
-
-function App() {
-  return (
-    <div className="App">
-      <CreatorPage />
-    </div>
-  );
+// Deprecated: legacy React entrypoint not used by Next.js app.
+export default function App() {
+  return null;
 }
-
-export default App;
