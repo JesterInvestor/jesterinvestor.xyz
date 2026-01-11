@@ -18,17 +18,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  width: 100%;
   cursor: url('/jester-hat-cursor.png'), pointer;
 }
 
 #__next {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
 }
