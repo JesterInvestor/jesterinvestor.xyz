@@ -121,7 +121,7 @@ const CreatorPage = () => {
       <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.avatar}>
-            <span className={styles.avatarText}>J</span>
+            <img src="/Video scooby gif.png" alt="Jesterinvestor Logo" className={styles.avatarImage} />
           </div>
           <h1>Jestrinvestor</h1>
           <p className={styles.bio}>Creator | Investor | Web3 Enthusiast</p>
