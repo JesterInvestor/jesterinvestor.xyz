@@ -95,6 +95,15 @@ const CreatorPage = () => {
       icon: '🎭',
       color: '#8A63D2',
       backgroundColor: '#ffffff'
+    },
+    {
+      id: 11,
+      name: 'Base',
+      handle: '0x24DE6CF049988BADfCa76dD54D72a3b3CEF8095e',
+      url: 'https://base.app/profile/0x24DE6CF049988BADfCa76dD54D72a3b3CEF8095e',
+      icon: '⛓️',
+      color: '#0052FF',
+      backgroundColor: '#ffffff'
     }
   ]
 
