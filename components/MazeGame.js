@@ -17,6 +17,7 @@ export default function MazeGame() {
   const [currentTime, setCurrentTime] = useState(null)
   const [attempts, setAttempts] = useState(0)
   const [bestTime, setBestTime] = useState(null)
+  const [showObnoxiousToast, setShowObnoxiousToast] = useState(false)
 
   // Fixed settings: Expert (25x25) and Kruskal's algorithm
   const difficulty = 'expert'
@@ -145,6 +146,11 @@ export default function MazeGame() {
       if (!savedBest || completionTime < savedBest) {
         setBestTime(completionTime)
         try { localStorage.setItem('mazeBestTime', completionTime.toString()) } catch {}
+      // Show obnoxious toast for sub-minute wins
+      if (completionTime < 60000) {
+        setShowObnoxiousToast(true)
+        setTimeout(() => setShowObnoxiousToast(false), 4000)
+      }
       }
     }
   }
@@ -212,7 +218,7 @@ export default function MazeGame() {
 
   return (
     <div className={styles.mazeContainer}>
-      <div className={styles.header}>SVG Maze Game</div>
+      <div className={styles.header}>Jester Investor&apos;s Maze Challenge</div>
 
       <div className={styles.controls}>
 
@@ -279,6 +285,15 @@ export default function MazeGame() {
         </div>
       )}
 
+
+      {showObnoxiousToast && (
+        <div className={styles.obnoxiousToast}>
+          <div className={styles.toastContent}>
+            🎉🎉🎉 UNDER A MINUTE! 🎉🎉🎉
+            <div className={styles.toastSubtext}>YOU&apos;RE A LEGEND!</div>
+          </div>
+        </div>
+      )}
       {pathCrossesWalls(userPath) && !gameComplete && userPath.length > 1 && (
         <div style={{ marginTop: 12, textAlign: 'center', color: '#ef4444', fontWeight: 700 }}>
           ⚠️ Path crosses walls! Try a different route.
