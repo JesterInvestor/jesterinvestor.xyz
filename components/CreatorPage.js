@@ -9,8 +9,8 @@ const CreatorPage = () => {
     {
       id: 1,
       name: 'Twitter',
-      handle: '@jestrinvestor2',
-      url: 'https://twitter.com/jestrinvestor2',
+      handle: '@jesterinvestor2',
+      url: 'https://twitter.com/jesterinvestor2',
       icon: '𝕏',
       color: '#000000',
       backgroundColor: '#ffffff'

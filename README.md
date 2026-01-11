@@ -12,7 +12,7 @@ A beautiful, interactive Linktree-style creator page built with React.
 
 ## Social Links
 
-- **Twitter**: @jestrinvestor2
+- **Twitter**: @jesterinvestor2
 - **Instagram**: @jesterinvestor
 - **TikTok**: @jesterinvestor
 - **YouTube**: @jesterinvestor
