@@ -16,8 +16,8 @@ const CreatorPage = () => {
       handle: '@jesterinvestor2',
       url: 'https://twitter.com/jesterinvestor2',
       icon: '𝕏',
-      color: '#000000',
-      backgroundColor: '#ffffff'
+      color: '#ffffff',
+      backgroundColor: '#000000'
     },
     {
       id: 2,
@@ -25,8 +25,8 @@ const CreatorPage = () => {
       handle: '@jesterinvestor',
       url: 'https://instagram.com/jesterinvestor',
       icon: '📷',
-      color: '#E4405F',
-      backgroundColor: '#fafafa'
+      color: '#ffffff',
+      backgroundColor: '#E4405F'
     },
     {
       id: 3,
@@ -34,8 +34,8 @@ const CreatorPage = () => {
       handle: '@jesterinvestor',
       url: 'https://tiktok.com/@jesterinvestor',
       icon: '♪',
-      color: '#000000',
-      backgroundColor: '#25f4ee'
+      color: '#ffffff',
+      backgroundColor: '#000000'
     },
     {
       id: 4,
@@ -43,8 +43,8 @@ const CreatorPage = () => {
       handle: '@Jester_Investor',
       url: 'https://www.youtube.com/@Jester_Investor',
       icon: '▶️',
-      color: '#FF0000',
-      backgroundColor: '#ffffff'
+      color: '#ffffff',
+      backgroundColor: '#FF0000'
     },
     {
       id: 5,
@@ -52,8 +52,8 @@ const CreatorPage = () => {
       handle: 'Discord Server',
       url: 'https://discord.gg/XPg2yRAt',
       icon: '💬',
-      color: '#5865F2',
-      backgroundColor: '#ffffff'
+      color: '#ffffff',
+      backgroundColor: '#5865F2'
     },
     {
       id: 6,
@@ -61,8 +61,8 @@ const CreatorPage = () => {
       handle: '@jesterinvestor',
       url: 'https://twitch.tv/jesterinvestor',
       icon: '🎮',
-      color: '#9146FF',
-      backgroundColor: '#ffffff'
+      color: '#ffffff',
+      backgroundColor: '#9146FF'
     },
     {
       id: 7,
@@ -70,8 +70,8 @@ const CreatorPage = () => {
       handle: '@jesterinvestor',
       url: 'https://linkedin.com/in/jesterinvestor',
       icon: '💼',
-      color: '#0A66C2',
-      backgroundColor: '#ffffff'
+      color: '#ffffff',
+      backgroundColor: '#0A66C2'
     },
     {
       id: 8,
@@ -79,8 +79,8 @@ const CreatorPage = () => {
       handle: '@jesterinvestor',
       url: 'https://github.com/jesterinvestor',
       icon: '🐙',
-      color: '#333333',
-      backgroundColor: '#ffffff'
+      color: '#ffffff',
+      backgroundColor: '#333333'
     },
     {
       id: 9,
@@ -88,8 +88,8 @@ const CreatorPage = () => {
       handle: 'altcoinabsurdity+jesterinvestor@gmail.com',
       url: 'mailto:altcoinabsurdity+jesterinvestor@gmail.com',
       icon: '✉️',
-      color: '#EA4335',
-      backgroundColor: '#ffffff'
+      color: '#ffffff',
+      backgroundColor: '#EA4335'
     },
     {
       id: 10,
@@ -97,8 +97,8 @@ const CreatorPage = () => {
       handle: '@jesterinvestor',
       url: 'https://farcaster.xyz/jesterinvestor',
       icon: '🎭',
-      color: '#8A63D2',
-      backgroundColor: '#ffffff'
+      color: '#ffffff',
+      backgroundColor: '#8A63D2'
     },
     {
       id: 11,
@@ -106,8 +106,8 @@ const CreatorPage = () => {
       handle: '0x24DE6CF049988BADfCa76dD54D72a3b3CEF8095e',
       url: 'https://base.app/profile/0x24DE6CF049988BADfCa76dD54D72a3b3CEF8095e',
       icon: '⛓️',
-      color: '#0052FF',
-      backgroundColor: '#ffffff'
+      color: '#ffffff',
+      backgroundColor: '#0052FF'
     },
     {
       id: 12,
@@ -115,8 +115,8 @@ const CreatorPage = () => {
       handle: 'Triviacast',
       url: 'https://farcaster.xyz/miniapps/UmWywlPILouA/triviacast',
       icon: '🎲',
-      color: '#7C3AED',
-      backgroundColor: '#ffffff'
+      color: '#ffffff',
+      backgroundColor: '#7C3AED'
     }
   ]
 
