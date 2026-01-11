@@ -18,8 +18,8 @@ const CreatorPage = () => {
     {
       id: 2,
       name: 'Instagram',
-      handle: '@jestrinvestor',
-      url: 'https://instagram.com/jestrinvestor',
+      handle: '@jesterinvestor',
+      url: 'https://instagram.com/jesterinvestor',
       icon: '📷',
       color: '#E4405F',
       backgroundColor: '#fafafa'
@@ -27,8 +27,8 @@ const CreatorPage = () => {
     {
       id: 3,
       name: 'TikTok',
-      handle: '@jestrinvestor',
-      url: 'https://tiktok.com/@jestrinvestor',
+      handle: '@jesterinvestor',
+      url: 'https://tiktok.com/@jesterinvestor',
       icon: '♪',
       color: '#000000',
       backgroundColor: '#25f4ee'
@@ -36,8 +36,8 @@ const CreatorPage = () => {
     {
       id: 4,
       name: 'YouTube',
-      handle: '@jestrinvestor',
-      url: 'https://youtube.com/@jestrinvestor',
+      handle: '@jesterinvestor',
+      url: 'https://youtube.com/@jesterinvestor',
       icon: '▶️',
       color: '#FF0000',
       backgroundColor: '#ffffff'
@@ -45,8 +45,8 @@ const CreatorPage = () => {
     {
       id: 5,
       name: 'Discord',
-      handle: '@jestrinvestor',
-      url: 'https://discord.com/users/jestrinvestor',
+      handle: '@jesterinvestor',
+      url: 'https://discord.com/users/jesterinvestor',
       icon: '💬',
       color: '#5865F2',
       backgroundColor: '#ffffff'
@@ -54,8 +54,8 @@ const CreatorPage = () => {
     {
       id: 6,
       name: 'Twitch',
-      handle: '@jestrinvestor',
-      url: 'https://twitch.tv/jestrinvestor',
+      handle: '@jesterinvestor',
+      url: 'https://twitch.tv/jesterinvestor',
       icon: '🎮',
       color: '#9146FF',
       backgroundColor: '#ffffff'
@@ -63,8 +63,8 @@ const CreatorPage = () => {
     {
       id: 7,
       name: 'LinkedIn',
-      handle: '@jestrinvestor',
-      url: 'https://linkedin.com/in/jestrinvestor',
+      handle: '@jesterinvestor',
+      url: 'https://linkedin.com/in/jesterinvestor',
       icon: '💼',
       color: '#0A66C2',
       backgroundColor: '#ffffff'
@@ -72,8 +72,8 @@ const CreatorPage = () => {
     {
       id: 8,
       name: 'GitHub',
-      handle: '@jestrinvestor',
-      url: 'https://github.com/jestrinvestor',
+      handle: '@jesterinvestor',
+      url: 'https://github.com/jesterinvestor',
       icon: '🐙',
       color: '#333333',
       backgroundColor: '#ffffff'
@@ -81,10 +81,19 @@ const CreatorPage = () => {
     {
       id: 9,
       name: 'Email',
-      handle: 'contact@jestrinvestor.xyz',
-      url: 'mailto:contact@jestrinvestor.xyz',
+      handle: 'altcoinabsurdity+jesterinvestor@gmail.com',
+      url: 'mailto:altcoinabsurdity+jesterinvestor@gmail.com',
       icon: '✉️',
       color: '#EA4335',
+      backgroundColor: '#ffffff'
+    },
+    {
+      id: 10,
+      name: 'Farcaster',
+      handle: '@jesterinvestor',
+      url: 'https://farcaster.xyz/jesterinvestor',
+      icon: '🎭',
+      color: '#8A63D2',
       backgroundColor: '#ffffff'
     }
   ]

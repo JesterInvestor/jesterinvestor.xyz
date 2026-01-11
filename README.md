@@ -13,14 +13,14 @@ A beautiful, interactive Linktree-style creator page built with React.
 ## Social Links
 
 - **Twitter**: @jestrinvestor2
-- **Instagram**: @jestrinvestor
-- **TikTok**: @jestrinvestor
-- **YouTube**: @jestrinvestor
-- **Discord**: @jestrinvestor
-- **Twitch**: @jestrinvestor
-- **LinkedIn**: @jestrinvestor
-- **GitHub**: @jestrinvestor
-- **Email**: contact@jestrinvestor.xyz
+- **Instagram**: @jesterinvestor
+- **TikTok**: @jesterinvestor
+- **YouTube**: @jesterinvestor
+- **Discord**: @jesterinvestor
+- **Twitch**: @jesterinvestor
+- **LinkedIn**: @jesterinvestor
+- **GitHub**: @jesterinvestor
+- **Email**: altcoinabsurdity+jesterinvestor@gmail.com
 
 ## Installation
 
