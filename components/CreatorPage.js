@@ -2,6 +2,9 @@
 
 import React from 'react'
 import SocialButton from './SocialButton'
+import AnimatedHeadline from './AnimatedHeadline'
+import GalleryGrid from './GalleryGrid'
+import AudioHero from './AudioHero'
 import styles from './CreatorPage.module.css'
 import { MouseTracker, FloatingEmoji } from './InteractiveElements'
 
@@ -131,6 +134,24 @@ const CreatorPage = () => {
           <h1>Jesterinvestor</h1>
           <p className={styles.bio}>Creator | Investor | Web3 Enthusiast</p>
           <p className={styles.subtitle}>Find me everywhere on the web</p>
+        </div>
+
+        {/* Inspiration Showcase (inspired by modern React sites) */}
+        <div style={{ marginBottom: 24 }}>
+          <AnimatedHeadline text="Vibrant, Minimal, and Futuristic" />
+          <div style={{ marginTop: 12 }}>
+            <GalleryGrid
+              items={[
+                { image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600', title: 'Neon Tech' },
+                { image: 'https://images.unsplash.com/photo-1526378722484-b1b0c51b66cc?w=600', title: 'Minimal Gallery' },
+                { image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600', title: 'Bold Typography' },
+                { image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600', title: 'Futuristic UI' }
+              ]}
+            />
+          </div>
+          <div style={{ marginTop: 14 }}>
+            <AudioHero src="https://www.kozco.com/tech/piano2-CoolEdit.mp3" title="Heavy Theme Preview" />
+          </div>
         </div>
 
         <div className={styles.socialsGrid}>
