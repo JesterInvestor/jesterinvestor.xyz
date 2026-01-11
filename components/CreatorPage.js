@@ -4,9 +4,9 @@ import React from 'react'
 import SocialButton from './SocialButton'
 import AnimatedHeadline from './AnimatedHeadline'
 import GalleryGrid from './GalleryGrid'
-import AudioHero from './AudioHero'
 import styles from './CreatorPage.module.css'
 import { MouseTracker, FloatingEmoji } from './InteractiveElements'
+import MazeGame from './MazeGame'
 
 const CreatorPage = () => {
   const socials = [
@@ -149,9 +149,12 @@ const CreatorPage = () => {
               ]}
             />
           </div>
-          <div style={{ marginTop: 14 }}>
-            <AudioHero src="https://www.kozco.com/tech/piano2-CoolEdit.mp3" title="Heavy Theme Preview" />
-          </div>
+        </div>
+
+        {/* SVG Maze Game with trippy neon line */}
+        <div style={{ marginBottom: 24 }}>
+          <AnimatedHeadline text="Trippy SVG Maze" />
+          <MazeGame />
         </div>
 
         <div className={styles.socialsGrid}>

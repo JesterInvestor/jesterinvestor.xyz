@@ -1,0 +1,84 @@
+.mazeContainer {
+  background: radial-gradient(800px 400px at 20% 0%, rgba(57,255,20,0.15), transparent 40%), #000;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: inset 0 0 0 1px rgba(57,255,20,0.25), 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.header {
+  color: #39FF14;
+  font-weight: 800;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 12px;
+  text-shadow: 0 0 12px rgba(57,255,20,0.5);
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.button {
+  background: #0dfe3f;
+  color: #000;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(13,254,63,0.6);
+}
+
+.button:disabled {
+  background: #1a1a1a;
+  color: #777;
+  box-shadow: none;
+}
+
+.svgWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.svg {
+  border: 1px solid rgba(57,255,20,0.35);
+  border-radius: 8px;
+  background: #0a0a0a;
+  max-width: 100%;
+  height: auto;
+  touch-action: none;
+}
+
+.wallBorder line,
+.wall line {
+  stroke: #1f2937;
+}
+
+.startCell rect { fill: #10b981; }
+.endCell rect { fill: #ef4444; }
+
+.startText,
+.endText {
+  fill: white;
+  font-weight: 800;
+}
+
+.trippyPath {
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 8px rgba(8,255,8,0.6));
+  animation: hueShift 3s linear infinite;
+}
+
+@keyframes hueShift {
+  0% { filter: hue-rotate(0deg) drop-shadow(0 0 8px rgba(8,255,8,0.6)); }
+  25% { filter: hue-rotate(90deg) drop-shadow(0 0 8px rgba(121,254,12,0.6)); }
+  50% { filter: hue-rotate(180deg) drop-shadow(0 0 8px rgba(57,255,20,0.6)); }
+  75% { filter: hue-rotate(270deg) drop-shadow(0 0 8px rgba(13,254,63,0.6)); }
+  100% { filter: hue-rotate(360deg) drop-shadow(0 0 8px rgba(8,255,8,0.6)); }
+}
