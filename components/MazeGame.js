@@ -18,20 +18,35 @@ export default function MazeGame() {
   const [attempts, setAttempts] = useState(0)
   const [bestTime, setBestTime] = useState(null)
   const [showObnoxiousToast, setShowObnoxiousToast] = useState(false)
+  const [toastMessage, setToastMessage] = useState('')
 
   // Fixed settings: Expert (25x25) and Kruskal's algorithm
   const difficulty = 'expert'
   const algorithm = 'kruskal'
 
   const svgRef = useRef(null)
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024)
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   const getDimensions = () => {
+    // Check if mobile/small screen
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+    const isSmallMobile = typeof window !== 'undefined' && window.innerWidth < 480
+    
     switch (difficulty) {
-      case 'easy': return { width: 10, height: 10, cellSize: 40 }
-      case 'hard': return { width: 20, height: 20, cellSize: 25 }
-      case 'expert': return { width: 25, height: 25, cellSize: 20 }
+      case 'easy': return { width: 10, height: 10, cellSize: isMobile ? 28 : 40 }
+      case 'hard': return { width: 20, height: 20, cellSize: isMobile ? 16 : 25 }
+      case 'expert': 
+        if (isSmallMobile) return { width: 20, height: 20, cellSize: 16 }
+        if (isMobile) return { width: 20, height: 20, cellSize: 18 }
+        return { width: 25, height: 25, cellSize: 20 }
       case 'medium':
-      default: return { width: 15, height: 15, cellSize: 30 }
+      default: return { width: 15, height: 15, cellSize: isMobile ? 20 : 30 }
     }
   }
 
@@ -66,6 +81,17 @@ export default function MazeGame() {
   useEffect(() => {
     createNewMaze()
   }, [createNewMaze])
+
+  useEffect(() => {
+    // Recreate maze when switching between mobile/desktop
+    const wasMobile = windowWidth < 768
+    const timeout = setTimeout(() => {
+      if ((windowWidth < 768) !== wasMobile) {
+        createNewMaze()
+      }
+    }, 300)
+    return () => clearTimeout(timeout)
+  }, [windowWidth])
 
   const getRelativePosition = (event) => {
     if (!svgRef.current) return null
@@ -109,6 +135,10 @@ export default function MazeGame() {
 
   const handleDrawStart = (event) => {
     event.preventDefault()
+    if (event.type === 'touchstart') {
+      // Prevent scrolling while drawing on mobile
+      document.body.style.overflow = 'hidden'
+    }
     const pos = getRelativePosition(event)
     if (pos && isInStartCell(pos.x, pos.y)) {
       setIsDrawing(true)
@@ -135,6 +165,8 @@ export default function MazeGame() {
 
   const handleDrawEnd = (event) => {
     event.preventDefault()
+    // Re-enable scrolling on mobile
+    document.body.style.overflow = ''
     if (!isDrawing) return
     setIsDrawing(false)
     const lastPoint = userPath[userPath.length - 1]
@@ -146,11 +178,16 @@ export default function MazeGame() {
       if (!savedBest || completionTime < savedBest) {
         setBestTime(completionTime)
         try { localStorage.setItem('mazeBestTime', completionTime.toString()) } catch {}
-      // Show obnoxious toast for sub-minute wins
+      }
+      // Show toast based on completion time
       if (completionTime < 60000) {
+        setToastMessage('🎉🎉🎉 UNDER A MINUTE! 🎉🎉🎉\nYOU\'RE A LEGEND!')
         setShowObnoxiousToast(true)
         setTimeout(() => setShowObnoxiousToast(false), 4000)
-      }
+      } else if (completionTime < 120000) {
+        setToastMessage('🎉 UNDER 2 MINUTES! 🎉\nNICE WORK!')
+        setShowObnoxiousToast(true)
+        setTimeout(() => setShowObnoxiousToast(false), 3000)
       }
     }
   }
@@ -289,8 +326,9 @@ export default function MazeGame() {
       {showObnoxiousToast && (
         <div className={styles.obnoxiousToast}>
           <div className={styles.toastContent}>
-            🎉🎉🎉 UNDER A MINUTE! 🎉🎉🎉
-            <div className={styles.toastSubtext}>YOU&apos;RE A LEGEND!</div>
+            {toastMessage.split('\n').map((line, i) => (
+              <div key={i}>{line}</div>
+            ))}
           </div>
         </div>
       )}

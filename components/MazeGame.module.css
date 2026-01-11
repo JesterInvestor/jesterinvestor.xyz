@@ -3,6 +3,22 @@
   border-radius: 16px;
   padding: 16px;
   box-shadow: inset 0 0 0 1px rgba(57,255,20,0.25), 0 10px 30px rgba(0,0,0,0.6);
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .mazeContainer {
+    padding: 12px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mazeContainer {
+    padding: 8px;
+    border-radius: 8px;
+  }
 }
 
 .header {
@@ -14,11 +30,40 @@
   text-shadow: 0 0 12px rgba(57,255,20,0.5);
 }
 
+@media (max-width: 768px) {
+  .header {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+}
+
 .controls {
   display: flex;
   gap: 10px;
   justify-content: center;
   margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .controls {
+    gap: 6px;
+    margin-bottom: 8px;
+  }
 }
 
 .button {
@@ -30,6 +75,24 @@
   padding: 10px 14px;
   cursor: pointer;
   box-shadow: 0 0 10px rgba(13,254,63,0.6);
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+  }
 }
 
 .button:disabled {
@@ -50,6 +113,21 @@
   max-width: 100%;
   height: auto;
   touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+@media (max-width: 768px) {
+  .svg {
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .svg {
+    border-radius: 4px;
+  }
 }
 
 .wallBorder line,
@@ -73,6 +151,18 @@
   stroke-linejoin: round;
   filter: drop-shadow(0 0 8px rgba(8,255,8,0.6));
   animation: hueShift 3s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .trippyPath {
+    stroke-width: 4;
+  }
+}
+
+@media (max-width: 480px) {
+  .trippyPath {
+    stroke-width: 4;
+  }
 }
 
 @keyframes hueShift {
@@ -119,12 +209,45 @@
     toastPulse 800ms ease-in-out infinite;
 }
 
+@media (max-width: 768px) {
+  .toastContent {
+    font-size: 3rem;
+    padding: 30px 50px;
+    border-radius: 15px;
+    border: 2px solid #08FF08;
+  }
+}
+
+@media (max-width: 480px) {
+  .toastContent {
+    font-size: 2rem;
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: 2px solid #08FF08;
+    max-width: 90%;
+  }
+}
+
 .toastSubtext {
   font-size: 3rem;
   margin-top: 20px;
   color: #39FF14;
   text-shadow: 0 0 15px rgba(57,255,20,0.7);
   animation: toastFlash 400ms ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .toastSubtext {
+    font-size: 2rem;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .toastSubtext {
+    font-size: 1.3rem;
+    margin-top: 10px;
+  }
 }
 
 @keyframes toastFadeIn {
