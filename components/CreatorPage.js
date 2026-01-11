@@ -130,14 +130,20 @@ const CreatorPage = () => {
         {/* HEADER WITH PNG AND TITLE AT TOP */}
         <div className={styles.header}>
           <div className={styles.avatar}>
-            <img src="/Video scooby gif.png" alt="Jesterinvestor Logo" className={styles.avatarImage} />
+            <img src="/Video%20scooby%20gif.png" alt="Jesterinvestor Logo" className={styles.avatarImage} />
           </div>
           <h1>Jesterinvestor</h1>
           <p className={styles.bio}>Creator | Investor | Web3 Enthusiast</p>
           <p className={styles.subtitle}>Find me everywhere on the web</p>
         </div>
 
-        {/* SOCIAL BUTTONS - BELOW HEADER */}
+        {/* SVG Maze Game with trippy neon line */}
+        <div style={{ marginBottom: 12 }}>
+          <AnimatedHeadline text="Trippy SVG Maze" />
+          <MazeGame />
+        </div>
+
+        {/* SOCIAL BUTTONS - BELOW MAZE */}
         <div className={styles.socialsGrid}>
           {socials.map((social) => (
             <SocialButton
@@ -153,11 +159,11 @@ const CreatorPage = () => {
         </div>
 
         {/* Gallery Showcase */}
-        <div style={{ marginBottom: 24 }}>
+        <div style={{ marginBottom: 12 }}>
           <AnimatedHeadline text="Vibrant, Minimal, and Futuristic" />
           <div style={{ marginTop: 12 }}>
             <GalleryGrid
-              items={[
+              items={[ 
                 { image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600', title: 'Neon Tech' },
                 { image: 'https://images.unsplash.com/photo-1526378722484-b1b0c51b66cc?w=600', title: 'Minimal Gallery' },
                 { image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600', title: 'Bold Typography' },
@@ -165,12 +171,6 @@ const CreatorPage = () => {
               ]}
             />
           </div>
-        </div>
-
-        {/* SVG Maze Game with trippy neon line */}
-        <div style={{ marginBottom: 24 }}>
-          <AnimatedHeadline text="Trippy SVG Maze" />
-          <MazeGame />
         </div>
 
         <footer className={styles.footer}>

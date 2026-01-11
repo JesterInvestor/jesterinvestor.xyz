@@ -22,6 +22,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  cursor: url('/jester-hat-cursor.png'), pointer;
 }
 
 #__next {
