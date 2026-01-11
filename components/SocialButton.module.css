@@ -63,6 +63,29 @@
   line-height: 1.2;
 }
 
+  .icon.iconBounce {
+    animation: iconBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  @keyframes iconBounce {
+    0%, 100% {
+      transform: scale(1) rotate(0deg);
+    }
+    25% {
+      transform: scale(1.2) rotate(-10deg);
+    }
+    50% {
+      transform: scale(1) rotate(10deg);
+    }
+    75% {
+      transform: scale(1.15) rotate(-5deg);
+    }
+  }
+
+  .buttonContent.wackyHover {
+    box-shadow: 0 0 20px rgba(8, 255, 8, 0.4), 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+
 .handle {
   font-weight: 500;
   font-size: 12px;

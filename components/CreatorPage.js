@@ -5,6 +5,9 @@ import SocialButton from './SocialButton'
 import styles from './CreatorPage.module.css'
 
 const CreatorPage = () => {
+import { MouseTracker, FloatingEmoji } from './InteractiveElements'
+
+const CreatorPage = () => {
   const socials = [
     {
       id: 1,
@@ -118,6 +121,10 @@ const CreatorPage = () => {
 
   return (
     <div className={styles.creatorPage}>
+      <MouseTracker />
+      <FloatingEmoji emoji="🎉" duration={3} delay={0} />
+      <FloatingEmoji emoji="💚" duration={4} delay={1} />
+      <FloatingEmoji emoji="✨" duration={3.5} delay={2} />
       <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.avatar}>

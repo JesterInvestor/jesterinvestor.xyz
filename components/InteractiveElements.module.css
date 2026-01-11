@@ -1,0 +1,73 @@
+.wackyButton {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #08FF08 0%, #39FF14 100%);
+  color: #000000;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(8, 255, 8, 0.5);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+  overflow: hidden;
+}
+
+.wackyButton:hover {
+  box-shadow: 0 0 40px rgba(8, 255, 8, 0.8), 0 0 60px rgba(57, 255, 20, 0.6);
+  transform: scale(1.15) rotate(-2deg);
+}
+
+.wackyButton:active {
+  transform: scale(0.95);
+}
+
+.floatingEmoji {
+  position: fixed;
+  font-size: 32px;
+  pointer-events: none;
+  opacity: 0.8;
+  animation: float 3s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-30px) rotate(10deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.5;
+  }
+}
+
+.mouseTracker {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(8, 255, 8, 0.6), rgba(57, 255, 20, 0.3));
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 20px rgba(8, 255, 8, 0.5);
+  z-index: 5;
+  transform: translate(-10px, -10px);
+  transition: left 0.1s ease-out, top 0.1s ease-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.pulseElement {
+  animation: pulse 2s ease-in-out infinite;
+}
