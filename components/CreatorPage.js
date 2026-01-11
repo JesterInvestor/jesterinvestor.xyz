@@ -45,8 +45,8 @@ const CreatorPage = () => {
     {
       id: 5,
       name: 'Discord',
-      handle: '@jesterinvestor',
-      url: 'https://discord.com/users/jesterinvestor',
+      handle: 'Discord Server',
+      url: 'https://discord.gg/XPg2yRAt',
       icon: '💬',
       color: '#5865F2',
       backgroundColor: '#ffffff'
@@ -103,6 +103,15 @@ const CreatorPage = () => {
       url: 'https://base.app/profile/0x24DE6CF049988BADfCa76dD54D72a3b3CEF8095e',
       icon: '⛓️',
       color: '#0052FF',
+      backgroundColor: '#ffffff'
+    },
+    {
+      id: 12,
+      name: 'Triviacast',
+      handle: 'Triviacast',
+      url: 'https://farcaster.xyz/miniapps/UmWywlPILouA/triviacast',
+      icon: '🎲',
+      color: '#7C3AED',
       backgroundColor: '#ffffff'
     }
   ]
