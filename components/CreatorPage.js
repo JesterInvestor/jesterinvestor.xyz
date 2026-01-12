@@ -7,6 +7,8 @@ import GalleryGrid from './GalleryGrid'
 import styles from './CreatorPage.module.css'
 import { MouseTracker, FloatingEmoji } from './InteractiveElements'
 import MazeGame from './MazeGame'
+import ChromaGrid from './ChromaGrid'
+import Ballpit from './Ballpit'
 
 const CreatorPage = () => {
   const socials = [
@@ -158,6 +160,25 @@ const CreatorPage = () => {
           ))}
         </div>
 
+        {/* Chroma Grid for Social Links */}
+        <div style={{ height: '600px', position: 'relative', marginTop: 16 }}>
+          <ChromaGrid
+            items={socials.map((s, idx) => ({
+              image: 'https://i.pravatar.cc/300?img=' + ((idx % 70) + 1),
+              title: s.name,
+              subtitle: 'Social Link',
+              handle: s.handle,
+              borderColor: s.color,
+              gradient: `linear-gradient(145deg, ${s.backgroundColor}, #000)`,
+              url: s.url
+            }))}
+            radius={300}
+            damping={0.45}
+            fadeOut={0.6}
+            ease="power3.out"
+          />
+        </div>
+
         {/* Gallery Showcase */}
         <div style={{ marginBottom: 12 }}>
           <AnimatedHeadline text="Vibrant, Minimal, and Futuristic" />
@@ -176,6 +197,18 @@ const CreatorPage = () => {
         <footer className={styles.footer}>
           <p>© 2026 Jesterinvestor. All links available 24/7</p>
         </footer>
+      </div>
+
+      {/* Ballpit at bottom of page */}
+      <div style={{ position: 'fixed', bottom: 0, left: 0, right: 0, height: '300px', zIndex: 0, pointerEvents: 'none' }}>
+        <Ballpit
+          count={120}
+          gravity={0.5}
+          friction={0.9975}
+          wallBounce={0.95}
+          followCursor
+          colors={['#000000', '#39FF14', '#08FF08', '#7cff67', '#121212', '#0dfe3f']}
+        />
       </div>
     </div>
   )

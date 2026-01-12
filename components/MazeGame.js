@@ -5,7 +5,6 @@ import { MazeGenerator } from './MazeGenerator'
 import { linesIntersect, smoothPath } from '../utils/mazeUtils'
 import styles from './MazeGame.module.css'
 import Waves from './Waves'
-import Ballpit from './Ballpit'
 
 export default function MazeGame() {
   const [maze, setMaze] = useState(null)
@@ -257,14 +256,6 @@ export default function MazeGame() {
 
   return (
     <div className={styles.mazeContainer}>
-      <Ballpit
-        count={100}
-        gravity={0.5}
-        friction={0.9975}
-        wallBounce={0.95}
-        followCursor
-        colors={["#5227FF","#7cff67","#ff6b6b","#39FF14"]}
-      />
       <Waves
         lineColor="#39FF14"
         backgroundColor="rgba(57, 255, 20, 0.06)"
