@@ -15,48 +15,6 @@
   --x: 50%;
   --y: 50%;
   --r: 220px;
-  --s: 50px;
-  --c1: #34495e;
-  --c2: #e74c3c;
-  --c3: #f1c40f;
-  --c4: #2ecc71;
-
-  background:
-    linear-gradient(45deg, var(--c1) 25%, transparent 25%),
-    linear-gradient(-45deg, var(--c1) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, var(--c1) 75%),
-    linear-gradient(-45deg, transparent 75%, var(--c1) 75%),
-    linear-gradient(45deg, var(--c2) 25%, transparent 25%) 0 var(--s),
-    linear-gradient(-45deg, var(--c2) 25%, transparent 25%) 0 var(--s),
-    linear-gradient(45deg, transparent 75%, var(--c2) 75%) 0 var(--s),
-    linear-gradient(-45deg, transparent 75%, var(--c2) 75%) 0 var(--s),
-    linear-gradient(45deg, var(--c3) 25%, transparent 25%) var(--s) var(--s),
-    linear-gradient(-45deg, var(--c3) 25%, transparent 25%) var(--s) var(--s),
-    linear-gradient(45deg, transparent 75%, var(--c3) 75%) var(--s) var(--s),
-    linear-gradient(-45deg, transparent 75%, var(--c3) 75%) var(--s) var(--s),
-    linear-gradient(45deg, var(--c4) 25%, transparent 25%) var(--s) 0,
-    linear-gradient(-45deg, var(--c4) 25%, transparent 25%) var(--s) 0,
-    linear-gradient(45deg, transparent 75%, var(--c4) 75%) var(--s) 0,
-    linear-gradient(-45deg, transparent 75%, var(--c4) 75%) var(--s) 0;
-
-  background-size: calc(2 * var(--s)) calc(2 * var(--s));
-  background-color: var(--c1);
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  background: repeating-radial-gradient(var(--c2) 55%, var(--c3) 56%);
-  animation: rotate 2s linear infinite;
 }
 
 @media (max-width: 1124px) {
@@ -217,14 +175,4 @@
 
 .name {
   margin: 0;
-}
-/* From Uiverse.io by Ratinax */
-.framedPhoto {
-  width: 100%;
-  height: 100%;
-  background: repeating-radial-gradient(var(--c2) 55%, var(--c3) 56%);
-  animation: rotate 2s linear infinite;
-  border: 8px solid #333;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }

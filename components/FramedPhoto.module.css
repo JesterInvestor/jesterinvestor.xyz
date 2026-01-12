@@ -1,0 +1,19 @@
+/* From Uiverse.io by Ratinax */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.framedPhoto {
+  width: 100%;
+  height: 100%;
+  background: repeating-radial-gradient(var(--c2) 55%, var(--c3) 56%);
+  animation: rotate 2s linear infinite;
+  border: 8px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
