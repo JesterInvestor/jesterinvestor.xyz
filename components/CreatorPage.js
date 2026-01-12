@@ -9,7 +9,6 @@ import { MouseTracker, FloatingEmoji } from './InteractiveElements'
 import MazeGame from './MazeGame'
 import ChromaGrid from './ChromaGrid'
 import Ballpit from './Ballpit'
-import Threads from './Threads'
 import FramedPhoto from './FramedPhoto'
 import UniversePattern from './UniversePattern'
 
@@ -127,16 +126,6 @@ const CreatorPage = () => {
 
   return (
     <div className={styles.creatorPage}>
-      {/* Threads background at top of page */}
-      <div style={{ position: 'fixed', top: 0, left: 0, right: 0, height: '600px', zIndex: 0, pointerEvents: 'none', opacity: 0.3 }}>
-        <Threads
-          color={[0.22, 1, 0.08]}
-          amplitude={1}
-          distance={0}
-          enableMouseInteraction={true}
-        />
-      </div>
-
       <MouseTracker />
       <FloatingEmoji emoji="🎉" duration={3} delay={0} />
       <FloatingEmoji emoji="💚" duration={4} delay={1} />
@@ -225,12 +214,12 @@ const CreatorPage = () => {
       </div>
 
       {/* Universe Pattern */}
-      <div style={{ width: '100%', height: '300px', marginTop: '2rem' }}>
+      <div style={{ width: '100%', height: '300px', marginTop: '4rem' }}>
         <UniversePattern />
       </div>
 
       {/* Framed Photo */}
-      <div style={{ width: '100%', height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
+      <div style={{ width: '100%', height: '300px', marginTop: '4rem', marginBottom: '2rem' }}>
         <FramedPhoto />
       </div>
     </div>
