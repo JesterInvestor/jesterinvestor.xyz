@@ -100,11 +100,6 @@ const ChromaGrid = ({
             cursor: c.url ? 'pointer' : 'default'
           }}
         >
-          {c.image && (
-            <div className={styles.chromaImgWrapper}>
-              <img src={c.image} alt={c.title} loading="lazy" />
-            </div>
-          )}
           <footer className={styles.chromaInfo}>
             <h3 className={styles.name}>{c.title}</h3>
             {c.handle && <span className={styles.handle}>{c.handle}</span>}
