@@ -53,7 +53,7 @@ const CreatorPage = () => {
       id: 5,
       name: 'Discord',
       handle: 'Discord Server',
-      url: 'https://discord.gg/XPg2yRAt',
+      url: 'https://discord.gg/JrFNyeCb',
       icon: '💬',
       color: '#ffffff',
       backgroundColor: '#5865F2'
