@@ -10,6 +10,8 @@ import MazeGame from './MazeGame'
 import ChromaGrid from './ChromaGrid'
 import Ballpit from './Ballpit'
 import Threads from './Threads'
+import FramedPhoto from './FramedPhoto'
+import UniversePattern from './UniversePattern'
 
 const CreatorPage = () => {
   const socials = [
@@ -220,6 +222,16 @@ const CreatorPage = () => {
           followCursor
           colors={['#000000', '#39FF14', '#08FF08', '#7cff67', '#121212', '#0dfe3f']}
         />
+      </div>
+
+      {/* Universe Pattern */}
+      <div style={{ width: '100%', height: '300px', marginTop: '2rem' }}>
+        <UniversePattern />
+      </div>
+
+      {/* Framed Photo */}
+      <div style={{ width: '100%', height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
+        <FramedPhoto />
       </div>
     </div>
   )
