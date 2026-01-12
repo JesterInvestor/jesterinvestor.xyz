@@ -105,6 +105,7 @@ const ChromaGrid = ({
             {c.handle && <span className={styles.handle}>{c.handle}</span>}
             {c.subtitle && <p className={styles.role}>{c.subtitle}</p>}
             {c.location && <span className={styles.location}>{c.location}</span>}
+            {c.linkName && <span className={styles.linkName}>{c.linkName}</span>}
           </footer>
         </article>
       ))}
