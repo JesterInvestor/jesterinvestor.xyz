@@ -25,7 +25,13 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
-  background-color: #000; /* base for drip look */
+  background-color: #000;
+}
+
+@media (max-width: 480px) {
+  .buttonContent {
+    padding: 12px;
+  }
 }
 
 .buttonContent::before {
