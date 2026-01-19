@@ -7,7 +7,6 @@ import GalleryGrid from './GalleryGrid'
 import styles from './CreatorPage.module.css'
 import { MouseTracker, FloatingEmoji } from './InteractiveElements'
 import MazeGame from './MazeGame'
-import ChromaGrid from './ChromaGrid'
 import Ballpit from './Ballpit'
 import FramedPhoto from './FramedPhoto'
 import UniversePattern from './UniversePattern'
@@ -160,25 +159,6 @@ const CreatorPage = () => {
               backgroundColor={social.backgroundColor}
             />
           ))}
-        </div>
-
-        {/* Chroma Grid for Social Links */}
-        <div style={{ height: '600px', position: 'relative', marginTop: 16 }}>
-          <ChromaGrid
-            items={socials.map((s, idx) => ({
-              image: 'https://i.pravatar.cc/300?img=' + ((idx % 70) + 1),
-              title: s.name,
-              subtitle: 'Social Link',
-              handle: s.handle,
-              borderColor: s.color,
-              gradient: `linear-gradient(145deg, ${s.backgroundColor}, #000)`,
-              url: s.url
-            }))}
-            radius={300}
-            damping={0.45}
-            fadeOut={0.6}
-            ease="power3.out"
-          />
         </div>
 
         {/* Gallery Showcase */}
